@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-public class P7 {
+public class FileHandling {
     public static void main(String[] args) throws FileNotFoundException,NumberFormatException,ArithmeticException{
         
        try{
