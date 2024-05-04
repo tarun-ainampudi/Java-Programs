@@ -36,7 +36,7 @@ class NonMetalElement extends Element{
     }
 }
 
-public class P8 {
+public class P7 {
 
     public static void main(String[] args) {
         Element e[] = new Element[4];
