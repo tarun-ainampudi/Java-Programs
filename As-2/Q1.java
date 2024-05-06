@@ -33,7 +33,7 @@ void VoteEligibility()throws NotEligibleToVoteException,NameNotValidException{
 }
 public class Q1 {
     public static void main(String[] args) {
-        Person p1 = new Person(1234,"abc",19, 'M');
+        Person p1 = new Person(1234,"abc",17, 'M');
         try{
         p1.VoteEligibility();
         System.out.println("Eligible to Vote");
