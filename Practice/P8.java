@@ -49,7 +49,7 @@ catch(InputMismatchException e){
 }
 
 }
-void CalcArea(){
+void CalArea(){
     double Area = (float)(Math.PI*Math.pow(Radiuds,2));
     System.out.println("Area of the Circle is "+Area);
 }
@@ -59,7 +59,7 @@ void CalcArea(){
 public class P8 {
     public static void main(String[] args) {
         Circle c1=new Circle();
-        c1.CalcArea();
+        c1.CalArea();
         
     }
 }

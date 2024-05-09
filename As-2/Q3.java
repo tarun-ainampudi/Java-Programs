@@ -1,21 +1,52 @@
-/*Create an abstract class named Book. Include a String field for the book’s title and a double 
-field for the book’s price. Within the class, include a constructor that requires the book title, 
-and add two get methods—one that returns the title and one that returns the price. Include 
-an abstract method named setPrice(). Create two child classes of Book: Fiction and NonFiction. 
-Each must include a setPrice() method that sets the price for all Fiction Books to $24.99 and 
-for all NonFiction Books to $37.99. Write a constructor for each subclass, and include a call to 
-setPrice() within each. Write an application demonstrating that you can create both a Fiction 
-and a NonFiction Book and display their fields. */
 abstract class Book{
     String BookTitle;
     double Price;
-    Book(String BookTitle,double Price){
+    Book(String BookTitle){
         this.BookTitle=BookTitle;
-        this.Price=Price;
+    }
+    String getBookTitle(){
+        return BookTitle;
+    }
+    double getPrice(){
+        return Price;
+    }
+    public abstract void setPrice();
+    public abstract void Display();
+}
+class Fiction extends Book{
+    Fiction(String BookTitle){
+        super(BookTitle);
+        setPrice();
+    }
+    public void setPrice(){
+        Price=24.99d;
+    }
+    public void Display(){
+        System.out.printf("Fiction Book :%-30sPrice : %.3f$\n",BookTitle,Price);
+    }
+}
+class NonFiction extends Book{
+    NonFiction(String BookTitle){
+        super(BookTitle);
+        setPrice();
+    }
+    public void setPrice(){
+        Price=37.99d;
+    }
+    public void Display(){
+        System.out.printf("NonFiction Book :%-27sPrice : %.3f$\n",BookTitle,Price);
     }
 }
 public class Q3{
     public static void main(String[] args) {
-        
+        Book B[] = new Book[4];
+        B[0]=new Fiction("Code Name Verity");
+        B[1]=new Fiction("Lilac Girls");
+        B[2]=new NonFiction("Night");
+        B[3]=new NonFiction("In Cold Blood");
+        B[0].Display();
+        B[2].Display();
+        B[3].Display();
+        B[1].Display();
     }
 }
