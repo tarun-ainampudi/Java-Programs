@@ -16,7 +16,8 @@ public class As_1_1 {
         for(int speed : speeds){
             sum+=speed;
         }
-        avgSpeed=sum/5;
+        avgSpeed=(double)sum/t.length;
+        System.out.printf("Average Speed :%f\n",avgSpeed);
         System.out.println("Average speed of the racers is : "+avgSpeed);
         System.out.print("Speed Greater than Average Speed are :");
         for(int speed : speeds){

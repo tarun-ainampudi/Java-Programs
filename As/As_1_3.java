@@ -25,7 +25,7 @@ public class As_1_3 {
         } else {
             System.out.println("The equation has no real roots.");
         }
-
+        System.out.println(Math.pow(2,3));
         scanner.close();
     }
 }
